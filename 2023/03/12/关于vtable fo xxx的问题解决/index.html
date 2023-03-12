@@ -23,17 +23,19 @@
     var CONFIG = {"hostname":"xsk-code.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="一切的恐惧，皆来自于火力不足">
-<meta property="og:type" content="website">
+  <meta name="description" content="C++ 错误 “undefine symbol vtable for xxx”问题描述最近在对一个开源库进行打包生成动态库的过程中遇到了问题。 在将打包好的动态库使用到项目开发中时，运行报错显示”undefine symbol vtable for xxx” 解决办法经过排查，我发现这个问题是由于动态库中找不到头文件 test.h 引起的。 通过修改 CMake 生成的 Makefile 文件，将">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Mr.SanKan&#39;s Blog">
-<meta property="og:url" content="https://xsk-code.github.io/archives/2023/index.html">
+<meta property="og:url" content="https://xsk-code.github.io/2023/03/12/%E5%85%B3%E4%BA%8Evtable%20fo%20xxx%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/index.html">
 <meta property="og:site_name" content="Mr.SanKan&#39;s Blog">
-<meta property="og:description" content="一切的恐惧，皆来自于火力不足">
+<meta property="og:description" content="C++ 错误 “undefine symbol vtable for xxx”问题描述最近在对一个开源库进行打包生成动态库的过程中遇到了问题。 在将打包好的动态库使用到项目开发中时，运行报错显示”undefine symbol vtable for xxx” 解决办法经过排查，我发现这个问题是由于动态库中找不到头文件 test.h 引起的。 通过修改 CMake 生成的 Makefile 文件，将">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-12T03:16:29.059Z">
+<meta property="article:modified_time" content="2023-03-12T03:41:45.888Z">
 <meta property="article:author" content="三看">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xsk-code.github.io/archives/2023/">
+<link rel="canonical" href="https://xsk-code.github.io/2023/03/12/%E5%85%B3%E4%BA%8Evtable%20fo%20xxx%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
 
 
 <script id="page-configurations">
@@ -41,12 +43,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | Mr.SanKan's Blog</title>
+  <title> | Mr.SanKan's Blog</title>
   
 
 
@@ -155,90 +157,109 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xsk-code.github.io/2023/03/12/%E5%85%B3%E4%BA%8Evtable%20fo%20xxx%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+      <meta itemprop="name" content="三看">
+      <meta itemprop="description" content="一切的恐惧，皆来自于火力不足">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.SanKan's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-03-12 11:16:29" itemprop="dateCreated datePublished" datetime="2023-03-12T11:16:29+08:00">2023-03-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
-    </div>
+        <h1 id="C-错误-“undefine-symbol-vtable-for-xxx”"><a href="#C-错误-“undefine-symbol-vtable-for-xxx”" class="headerlink" title="C++ 错误 “undefine symbol vtable for xxx”"></a>C++ 错误 “undefine symbol vtable for xxx”</h1><h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>最近在对一个开源库进行打包生成动态库的过程中遇到了问题。</p>
+<p>在将打包好的动态库使用到项目开发中时，运行报错显示”undefine symbol vtable for xxx”</p>
+<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>经过排查，我发现这个问题是由于动态库中找不到头文件 <code>test.h</code> 引起的。</p>
+<p>通过修改 CMake 生成的 Makefile 文件，将动态库中加入了 <code>test.h</code> 文件，以便在使用的时候能够正常调用它。</p>
+<p>具体而言，原先生成动态库的命令是这样写的：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">add_library</span>(demo <span class="variable">$&#123;SRC&#125;</span>)</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>将其修改为：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">add_library</span>(demo <span class="variable">$&#123;SRC&#125;</span> <span class="keyword">test</span>.h)</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-03-12T11:16:29+08:00"
-              content="2023-03-12">
-          03-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/03/12/%E5%85%B3%E4%BA%8Evtable%20fo%20xxx%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" itemprop="url">
-            <span itemprop="name">未命名</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-01-08T22:02:00+08:00"
-              content="2023-01-08">
-          01-08
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/01/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url">
-            <span itemprop="name">正则表达式</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-01-02T19:48:19+08:00"
-              content="2023-01-02">
-          01-02
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/01/02/Hexo%E4%B8%BB%E9%A2%98next%E9%85%8D%E7%BD%AE%E7%BE%8E%E5%8C%96/" itemprop="url">
-            <span itemprop="name">Hexo主题next配置美化</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+<p>这样就能够解决 <code>undefine symbol vtable for xxx</code> 错误了。</p>
+<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h1><p>当时在排查问题的时候也找到了很多可能的原因：</p>
+<ol>
+<li><p>头文件中类的虚函数没有被实现</p>
+<blockquote>
+<p>解决方法是对类的虚函数加上 <code>&#123; &#125;</code> 进行实现。</p>
+</blockquote>
+</li>
+<li><p>如果该类为子类，也可能是父类的虚函数没有被实现</p>
+<blockquote>
+<p>解决方法是将父类的虚函数加上 <code>&#123; &#125;</code> 进行实现</p>
+</blockquote>
+</li>
+<li><p>类中有析构函数的声明，但是没有实现</p>
+<blockquote>
+<p>解决方法是在析构函数后面加上 <code>&#123; &#125;</code></p>
+</blockquote>
+</li>
+<li><p>还有可能是使用了Qt中的Q_Object</p>
+<blockquote>
+<p>但是这一点我没有找到明确的解决方法，所以我就按照我上面的方法进行了尝试，然后解决了</p>
+</blockquote>
+</li>
+</ol>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/01/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="prev" title="正则表达式">
+      <i class="fa fa-chevron-left"></i> 正则表达式
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -291,6 +312,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E9%94%99%E8%AF%AF-%E2%80%9Cundefine-symbol-vtable-for-xxx%E2%80%9D"><span class="nav-text">C++ 错误 “undefine symbol vtable for xxx”</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-text">解决办法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98"><span class="nav-text">其他问题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
